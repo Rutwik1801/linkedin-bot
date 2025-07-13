@@ -5,6 +5,7 @@ from openai import OpenAI
 from prompts.templates import get_prompt_for_day
 
 def generate_linkedin_post():
+    print(os.getenv("OPENAI_API_KEY"))
     client = OpenAI(api_key=os.getenv("OPENAI_API_KEY"))
     day = datetime.datetime.today().strftime('%A')
     prompt = get_prompt_for_day(day)

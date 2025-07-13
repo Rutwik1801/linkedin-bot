@@ -7,7 +7,7 @@ from generate_post import generate_linkedin_post
 post_text = generate_linkedin_post()
 
 headers = {
-    "Authorization": f"Bearer ${os.getenv("LINKEDIN_ACCESS_TOKEN")}",
+    "Authorization": f"Bearer {os.getenv('LINKEDIN_ACCESS_TOKEN')}",
     "Content-Type": "application/json",
     "X-Restli-Protocol-Version": "2.0.0"
 }
