@@ -18,7 +18,7 @@ This is an automated LinkedIn posting bot that uses the [ChatGPT API](https://pl
 - **OpenAI API** - for content generation
 - **LinkedIn API** - for posting to your profile
 - **GitHub Actions** - for daily automation
-- **Node.js / Python / Bash** (depending on your script implementation)
+- **Python** 
 
 ---
 
@@ -30,34 +30,13 @@ To run the bot, set the following secrets in your GitHub repository:
 |-----------------------|--------------------------------------------------|
 | `OPENAI_API_KEY`      | Your OpenAI API key                              |
 | `LINKEDIN_ACCESS_TOKEN` | OAuth token with `w_member_social` scope       |
-| `LINKEDIN_PROFILE_ID` | Your LinkedIn URN or ID (e.g. `urn:li:person:xyz`) |
+| `LINKEDIN_PROFILE_URN` | Your LinkedIn URN or ID (e.g. `urn:li:person:xyz`) |
 
 ---
 
 ## 🗓️ GitHub Workflow
 
-The workflow is triggered daily at 9:00 AM UTC:
-
-```yaml
-on:
-  schedule:
-    - cron: '0 9 * * *'  # every day at 9 AM UTC
-  workflow_dispatch:
-
-jobs:
-  post_to_linkedin:
-    runs-on: ubuntu-latest
-    steps:
-      - name: Checkout repo
-        uses: actions/checkout@v3
-
-      - name: Set up Node.js
-        uses: actions/setup-node@v3
-        with:
-          node-version: '18'
-
-      - name: Install dependencies
-        run: npm install
+The workflow is triggered daily at 9:00 AM UTC
 
       - name: Run the bot
         run: node index.js
