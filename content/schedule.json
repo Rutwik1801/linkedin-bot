@@ -1,9 +1,9 @@
 {
-  "Monday": "Explain a mini JavaScript or React concept simply.",
-  "Tuesday": "Share a common frontend mistake or myth with a fix.",
-  "Wednesday": "Post a dev poll or ask an engaging question.",
-  "Thursday": "Break down a short piece of code with explanation.",
-  "Friday": "Share a dev meme, hot take, or funny insight.",
-  "Saturday": "Suggest a micro project or side project idea.",
-  "Sunday": "Recap one tip from the week or share a useful resource."
+  "Monday": "Explain a really complex JavaScript or React concept simply.",
+  "Tuesday": "Share a common frontend mistake with a fix.",
+  "Wednesday": "Explain an under the hood working concept of react.",
+  "Thursday": "Explain a complex frontend concept using real world analogy",
+  "Friday": "Share a way to optimize websites on the frontend",
+  "Saturday": "Suggest a less common micro project or side project idea that invloves ai and frontend.",
+  "Sunday": "Share an insightful concept related to frontend system design."
 }
